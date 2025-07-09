@@ -36,7 +36,7 @@ const Hero = () => {
               animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1 }}
-              className="absolute inset-0 w-full h-[900px] object-cover object-center rounded-2xl"
+              className="absolute inset-0 w-full h-[800px] object-cover object-center rounded-2xl"
             />
           )
         ))}
