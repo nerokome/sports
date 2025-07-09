@@ -13,26 +13,29 @@ const Mission = () => {
 
   return (
     <div className="relative w-full bg-black min-h-screen overflow-hidden">
-      {/* 🎥 Background Video */}
-      <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[700px]">
+      {/* 🎥 Background Video Section */}
+      <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px]">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          preload="auto"
+          poster="/fallback.jpg" // ✅ optional: fallback image while loading
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75"
         >
           <source src="/video.mp4" type="video/mp4" />
+          <source src="/video.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
 
-        {/* 🖼️ Overlay */}
+        {/* 🖼️ Black overlay (optional - darkens video for readability) */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10" />
 
-        {/* 📢 Foreground Text */}
+        {/* 📢 Foreground Content */}
         <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
           <motion.h1
-            className="text-white font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold"
+            className="text-white font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -41,7 +44,7 @@ const Mission = () => {
           </motion.h1>
 
           <motion.p
-            className="text-white text-base sm:text-lg mt-4 max-w-xl"
+            className="text-white text-base sm:text-lg mt-4 max-w-2xl font-light"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -61,11 +64,11 @@ const Mission = () => {
         </div>
       </div>
 
-      {/* ⬇️ Part Section */}
+      {/* ⬇️ Content after video */}
       <div ref={partRef} className="relative z-30">
         <Part />
-        <NewsletterForm/>
-        <Endcontact/>
+        <NewsletterForm />
+        <Endcontact />
       </div>
     </div>
   );
