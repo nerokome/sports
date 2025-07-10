@@ -36,7 +36,7 @@ const Community = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-           <span className='text-pink-300'> Connect</span> <span className='text-yellow-400'>Compete</span> <span className='text-green-500'> Grow together</span> 
+           Connect Compete Grow together
           </motion.h1>
 
           <motion.p
