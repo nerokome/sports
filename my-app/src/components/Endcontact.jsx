@@ -63,7 +63,7 @@ const Endcontact = () => {
           <ul className="space-y-1 text-sm">
             <li><a href="/home" className="hover:underline">HOMEPAGE</a></li>
             <li><a href="/mission" className="hover:underline">MISSION</a></li>
-            <li><a href="#" className="hover:underline">CONTACTS</a></li>
+            <li><a href="/contact" className="hover:underline">CONTACTS</a></li>
           </ul>
         </motion.div>
 

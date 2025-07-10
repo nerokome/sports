@@ -88,7 +88,7 @@ const Body = () => {
         {roadmapItems.map((item, index) => (
           <motion.div
             key={index}
-            className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-20 mt-50 sm:mt-20"
+            className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-20 mt-20 mb-10 sm:mt-20"
             variants={cardVariant}
             whileInView="visible"
             initial="hidden"
