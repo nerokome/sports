@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <div className="relative overflow-hidden">
       {/* HERO SECTION */}
-      <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px]">
+      <div className="relative h-[900px] sm:h-[600px] md:h-[700px] lg:h-[800px]">
         <AnimatePresence>
           {images.map((img, index) =>
             index === current && (
