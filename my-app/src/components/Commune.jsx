@@ -56,26 +56,26 @@ const communityData = [
 const Commune = () => {
   return (
     <div className="bg-black text-white py-16 px-4 sm:px-10 min-h-screen">
-      <div className="max-w-7xl mx-auto text-center">
-        <motion.h2
-          className="text-4xl sm:text-5xl font-extrabold mb-6 tracking-tight"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          The SCAH Community
-        </motion.h2>
+     <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+  <motion.h2
+    className="text-2xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 tracking-tight leading-tight"
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    The SCAH Community
+  </motion.h2>
 
-        <motion.p
-          className="text-lg sm:text-xl max-w-3xl mx-auto mb-14 text-gray-300"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          A collaborative space of athletes, coaches, scouts, and fans—each playing a vital role in discovering and developing future stars.
-        </motion.p>
+  <motion.p
+    className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 sm:mb-14 text-gray-300 leading-relaxed"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.3, duration: 0.6 }}
+  >
+    A collaborative space of athletes, coaches, scouts, and fans—each playing a vital role in discovering and developing future stars.
+  </motion.p>
 
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 mb-30">
           {communityData.map((group, index) => (
             <motion.a
               key={index}
@@ -106,16 +106,7 @@ const Commune = () => {
           ))}
         </div>
 
-        <motion.div
-          className="mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-        >
-          <button className="px-8 py-4 bg-green-500 text-black font-semibold text-lg rounded-full hover:bg-green-600 transition">
-            Join the Movement
-          </button>
-        </motion.div>
+        
       </div>
     </div>
   );
