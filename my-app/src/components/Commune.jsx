@@ -133,7 +133,7 @@ const Commune = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <div className="bg-[#000d2f] max-w-lg w-full p-6 rounded-xl relative text-left">
+              <div className="bg-black max-w-lg w-full p-6 rounded-xl relative text-left">
                 <button className="absolute top-3 right-4 text-white text-xl" onClick={closeForm}>✕</button>
                 <h3 className="text-2xl font-bold mb-4">{selectedRole} Contact</h3>
 
