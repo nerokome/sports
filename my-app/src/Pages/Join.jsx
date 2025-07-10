@@ -5,7 +5,7 @@ import Endcontact from '../components/Endcontact';
 // ✅ List of slideshow images
 const images = [
   '/wen.webp', 
-  '/pen.webp',
+  '/amerball.webp',
   '/ken.webp',
 ];
 

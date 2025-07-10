@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import Endcontact from '../components/Endcontact';
@@ -10,10 +12,18 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative w-full bg-gray-300 min-h-screen overflow-hidden">
+   <div
+  className="relative w-full min-h-[100dvh] overflow-hidden bg-cover bg-center sm:bg-top bg-no-repeat"
+  style={{
+    backgroundImage: `url('/balll.webp')`,
+  }}
+>
+
       <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[700px]">
+        {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10" />
 
+        {/* Hero Content */}
         <div className="relative z-20 flex flex-col items-start justify-center h-full px-4 sm:px-8 md:px-16 lg:px-20 text-left">
           <motion.h1
             className="text-white font-mono italic text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold"
@@ -57,8 +67,7 @@ const Contact = () => {
 
         <div className="mb-10">
           <h3 className="text-2xl font-semibold mb-2">Address</h3>
-          <p className="font-bold">SCAH </p>
-          
+          <p className="font-bold">SCAH</p>
         </div>
 
         <div className="space-y-2">
@@ -97,7 +106,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Footer or next section */}
+      {/* Footer or Endcontact Section */}
       <div ref={partRef} className="relative z-30">
         <Endcontact />
       </div>
@@ -105,4 +114,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact;
