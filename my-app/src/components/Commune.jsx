@@ -118,7 +118,7 @@ const Commune = () => {
                   </div>
                   <FiExternalLink className="text-green-400" />
                 </div>
-                <p className="text-sm text-gray-400">{group.description}</p>
+                <p className="text-sm text-gray-300">{group.description}</p>
               </div>
             </motion.div>
           ))}
@@ -128,75 +128,76 @@ const Commune = () => {
         <AnimatePresence>
           {selectedRole && (
             <motion.div
-              className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 px-4"
+              className="fixed inset-0 bg-gray-500 bg-opacity-80 flex justify-center items-center z-50 px-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <div className="bg-black max-w-lg w-full p-6 rounded-xl relative text-left">
-                <button className="absolute top-3 right-4 text-white text-xl" onClick={closeForm}>✕</button>
+              <div className="bg-gray-300 max-w-lg w-full p-6 rounded-xl relative text-left">
+                <button className="absolute top-3 right-4 text-gray-800 text-xl" onClick={closeForm}>✕</button>
                 <h3 className="text-2xl font-bold mb-4">{selectedRole} Contact</h3>
 
-                <form className="space-y-4" onSubmit={handleSubmit}>
-                  <input
-                    name="name"
-                    placeholder="Name *"
-                    className="w-full p-3 rounded-lg bg-transparent border border-white text-white placeholder-gray-300"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                  <input
-                    name="email"
-                    type="email"
-                    placeholder="Email *"
-                    className="w-full p-3 rounded-lg bg-transparent border border-white text-white placeholder-gray-300"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                  <input
-                    name="club"
-                    placeholder="Company / Club *"
-                    className="w-full p-3 rounded-lg bg-transparent border border-white text-white placeholder-gray-300"
-                    value={formData.club}
-                    onChange={handleChange}
-                    required
-                  />
-                  <input
-                    name="position"
-                    placeholder="Position"
-                    className="w-full p-3 rounded-lg bg-transparent border border-white text-white placeholder-gray-300"
-                    value={formData.position}
-                    onChange={handleChange}
-                  />
-                  <textarea
-                    name="message"
-                    placeholder="Type your message to us..."
-                    className="w-full p-3 rounded-lg bg-transparent border border-white text-white placeholder-gray-300 h-28 resize-none"
-                    value={formData.message}
-                    onChange={handleChange}
-                  />
+               <form className="space-y-4" onSubmit={handleSubmit}>
+  <input
+    name="name"
+    placeholder="Name *"
+    className="w-full p-3 rounded-lg bg-transparent border border-white text-gray-800 placeholder-gray-400"
+    value={formData.name}
+    onChange={handleChange}
+    required
+  />
+  <input
+    name="email"
+    type="email"
+    placeholder="Email *"
+    className="w-full p-3 rounded-lg bg-transparent border border-white text-gray-800 placeholder-gray-400"
+    value={formData.email}
+    onChange={handleChange}
+    required
+  />
+  <input
+    name="club"
+    placeholder="Company / Club *"
+    className="w-full p-3 rounded-lg bg-transparent border border-white text-gray-800 placeholder-gray-400"
+    value={formData.club}
+    onChange={handleChange}
+    required
+  />
+  <input
+    name="position"
+    placeholder="Position"
+    className="w-full p-3 rounded-lg bg-transparent border border-white text-gray-800 placeholder-gray-400"
+    value={formData.position}
+    onChange={handleChange}
+  />
+  <textarea
+    name="message"
+    placeholder="Type your message to us..."
+    className="w-full p-3 rounded-lg bg-transparent border border-white text-gray-800 placeholder-gray-400 h-28 resize-none"
+    value={formData.message}
+    onChange={handleChange}
+  />
 
-                  <label className="flex items-center gap-2 text-sm text-gray-300">
-                    <input
-                      type="checkbox"
-                      name="subscribe"
-                      checked={formData.subscribe}
-                      onChange={handleChange}
-                    />
-                    Join our exclusive newsletter community and get insider news and tips.
-                  </label>
+  <label className="flex items-center gap-2 text-sm text-gray-800">
+    <input
+      type="checkbox"
+      name="subscribe"
+      checked={formData.subscribe}
+      onChange={handleChange}
+    />
+    Join our exclusive newsletter community and get insider news and tips.
+  </label>
 
-                  <button
-                    type="submit"
-                    className="bg-blue-500 hover:bg-blue-600 w-full py-3 rounded-lg font-semibold text-white"
-                  >
-                    SEND
-                  </button>
-                </form>
+  <button
+    type="submit"
+    className="bg-blue-500 hover:bg-blue-600 w-full py-3 rounded-lg font-semibold text-white"
+  >
+    SEND
+  </button>
+</form>
 
-                <p className="text-xs text-gray-400 mt-4">
+
+                <p className="text-xs text-gray-600 mt-4">
                   This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
                   By submitting your personal data, you allow us to process it as described in our data policy.
                 </p>
