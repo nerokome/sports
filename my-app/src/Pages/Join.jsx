@@ -114,7 +114,7 @@ const Join = () => {
         </div>
 
         {/* 🔹 Slideshow Section - Right */}
-        <div className="md:w-1/2 w-full flex items-center justify-center p-6 bg-gray-200">
+        <div className="md:w-1/2 w-full flex items-center justify-center p-6 ">
           <div className="relative w-full max-w-md h-[300px] md:h-[400px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.img

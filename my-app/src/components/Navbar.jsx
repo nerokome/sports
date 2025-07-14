@@ -28,17 +28,14 @@ const Navbar = () => {
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
+
       >
-        <motion.p className='font-mono italic text-3xl p-4 mt-2' whileHover={{ scale: 1.05 }}>
-          SCAH
-        </motion.p>
-        <motion.div
-          animate={{ rotate: [0, 15, -15, 0] }}
-          transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-          className='mt-6'
-        >
-          <IoFootballOutline size={50} className='animate-bounce' />
-        </motion.div>
+        <img
+            src="/scah.png" // Replace with actual image path
+            alt="Football Player"
+            className=""
+          />
+       
       </motion.div>
 
       {/* Desktop Navigation */}
@@ -68,10 +65,20 @@ const Navbar = () => {
           <motion.button
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.05 }}
-          className="bg-blue-400 hover:bg-blue-600 text-white text-sm font-mono py-2 px-3 h-10 sm:px-4 sm:py-2
-             rounded-2xl transition duration-300 ease-in-out italic"
+          className="bg-blue-400 hover:bg-blue-600 text-white text-md  py-2 px-3 h-10 sm:px-4 sm:py-2
+             rounded-lg transition duration-300 ease-in-out italic "
         >
-          Login
+          sign up
+        </motion.button>
+        </a>
+        <a href='/join' >
+          <motion.button
+          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.05 }}
+          className="bg-blue-400 hover:bg-blue-600 text-white text-md  py-2 px-3 h-10 sm:px-4 sm:py-2
+             rounded-lg transition duration-300 ease-in-out italic "
+        >
+          sign in
         </motion.button>
         </a>
       </motion.div>

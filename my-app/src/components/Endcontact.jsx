@@ -20,20 +20,14 @@ const Endcontact = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.p
-            className="font-mono italic text-3xl p-4 mt-2"
-            whileHover={{ scale: 1.05 }}
-          >
-            SCAH
-          </motion.p>
+          
+          <img
+          src="/scah.png"
+         alt="SCAH Logo"
+          className="w-32 h-auto md:w-40 object-contain"
+/>
 
-          <motion.div
-            animate={{ rotate: [0, 15, -15, 0] }}
-            transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-            className="mt-6"
-          >
-            <IoFootballOutline size={40} className="text-gray-300 animate-bounce" />
-          </motion.div>
+       
         </motion.div>
 
         {/* Legal Links */}
@@ -45,10 +39,10 @@ const Endcontact = () => {
         >
           <h4 className="font-semibold text-lg">Legal</h4>
           <ul className="space-y-1 text-sm">
-            <li><a href="#" className="hover:underline">TERMS AND CONDITIONS</a></li>
-            <li><a href="#" className="hover:underline">PROTECTION OF PERSONAL DATA</a></li>
-            <li><a href="#" className="hover:underline">PROCESSING OF PERSONAL DATA</a></li>
-            <li><a href="#" className="hover:underline">COOKIES POLICY</a></li>
+            <li><a href="#" className="hover:underline">Terms and conditions</a></li>
+            <li><a href="#" className="hover:underline">Protection of personal data</a></li>
+            <li><a href="#" className="hover:underline">Processing of personal data</a></li>
+            <li><a href="#" className="hover:underline">Cookies policy</a></li>
           </ul>
         </motion.div>
 
@@ -60,10 +54,10 @@ const Endcontact = () => {
           transition={{ delay: 0.4, duration: 0.5 }}
         >
           <h4 className="font-semibold text-lg">SCAH</h4>
-          <ul className="space-y-1 text-sm">
-            <li><a href="/home" className="hover:underline">HOMEPAGE</a></li>
-            <li><a href="/mission" className="hover:underline">MISSION</a></li>
-            <li><a href="/contact" className="hover:underline">CONTACTS</a></li>
+          <ul className="space-y-1 text-sm ">
+            <li><a href="/home" className="hover:underline">Homepage</a></li>
+            <li><a href="/mission" className="hover:underline">Mission</a></li>
+            <li><a href="/contact" className="hover:underline">Contacts</a></li>
           </ul>
         </motion.div>
 
@@ -81,7 +75,7 @@ const Endcontact = () => {
         </motion.div>
       </div>
       <div className='flex items-center justify-center mt-30'>
-        <p className='text-xl font-mono '>
+        <p className='text-md '>
           SCAH @2025
         </p>
       </div>
