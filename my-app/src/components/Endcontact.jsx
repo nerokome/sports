@@ -22,7 +22,7 @@ const Endcontact = () => {
         >
           
           <img
-          src="/scah.png"
+          src="/sca.png"
          alt="SCAH Logo"
           className="w-32 h-auto md:w-40 object-contain"
 />
