@@ -30,11 +30,11 @@ const Navbar = () => {
         transition={{ duration: 0.6 }}
 
       >
-        <img
-            src="/scah.png" // Replace with actual image path
-            alt="Football Player"
-            className=""
-          />
+       <img
+          src="/scah.png"
+         alt="SCAH Logo"
+          className="w-32 h-auto md:w-40 object-contain"
+/>
        
       </motion.div>
 
