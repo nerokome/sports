@@ -82,11 +82,9 @@ const Join = () => {
 
             <div className="mt-6 text-base sm:text-lg font-medium text-gray-700">
               <p>
-                Welcome to <span className="text-blue-600 font-semibold">SCAH</span>, the all-in-one
+                Welcome to SCAH, the all-in-one
                 scouting hub unlocking hidden youth talent through data, video, and performance tools.
-                Join the next-gen platform built for <span className="text-red-500">scouts</span>,{' '}
-                <span className="text-yellow-500">coaches</span>, and{' '}
-                <span className="text-green-600">rising athletes</span>.
+                Join the next-gen platform built for scouts coaches rising athletes
               </p>
             </div>
 
