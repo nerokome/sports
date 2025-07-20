@@ -108,13 +108,7 @@ const Body = () => {
                 {item.description}
               </motion.p>
               <motion.div className="flex items-center justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="rounded-2xl py-2 px-4 font-mono italic text-gray-200 bg-gray-900 w-[100px]"
-                >
-                  Visit
-                </motion.button>
+               
               </motion.div>
             </motion.div>
 
