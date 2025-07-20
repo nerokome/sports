@@ -142,14 +142,14 @@ const Navbar = () => {
       {/* Bottom Section: Sign In / Sign Up */}
       <div className="flex flex-col gap-3">
         <Link
-          to="/signin"
+          to="/join"
           onClick={handleNav}
           className="block text-center px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition"
         >
           Sign In
         </Link>
         <Link
-          to="/signup"
+          to="/join"
           onClick={handleNav}
           className="block text-center px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition"
         >
