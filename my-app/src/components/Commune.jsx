@@ -5,42 +5,42 @@ import { FiExternalLink } from 'react-icons/fi';
 const communityData = [
   {
     role: 'Athletes',
-    emoji: '🏃‍♂',
+   
     image: '/ath.webp',
     description:
       'Aspiring players showcasing skills, uploading match videos, and seeking discovery opportunities.',
   },
   {
     role: 'Coaches & Trainers',
-    emoji: '🏋‍♂',
+    
     image: '/aoc.webp',
     description:
       'Dedicated mentors focused on developing raw talent and guiding players toward their goals.',
   },
   {
     role: 'Scouts & Agents',
-    emoji: '🕵',
+    
     image: '/scout.webp',
     description:
       'Professional eyes searching for hidden gems and high-potential players across the globe.',
   },
   {
     role: 'Clubs & Academies',
-    emoji: '🏟',
+    
     image: '/club.webp',
     description:
       'Organizations looking to partner, recruit, and nurture future stars through a robust platform.',
   },
   {
     role: 'Fans & Supporters',
-    emoji: '📣',
+    
     image: '/fan.webp',
     description:
       'Families, followers, and communities cheering on talent and amplifying their journey.',
   },
   {
     role: 'Analysts & Technologists',
-    emoji: '🧠',
+    
     image: '/tech.webp',
     description:
       'Builders of smart tools and data systems driving modern scouting, analysis, and growth.',
