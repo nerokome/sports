@@ -5,7 +5,7 @@ import { FiExternalLink } from 'react-icons/fi';
 const communityData = [
   {
     role: 'Athletes',
-   
+  
     image: '/ath.webp',
     description:
       'Aspiring players showcasing skills, uploading match videos, and seeking discovery opportunities.',

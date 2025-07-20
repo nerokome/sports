@@ -3,31 +3,31 @@ import { motion } from 'framer-motion';
 
 const roadmapItems = [
   {
-    title: '🚀 Scouting Hub',
+    title: 'Scouting Hub',
     description:
       'Discover grassroots talents with professional-grade scouting tools. Track and compare performances in real time.',
     image: '/coach.webp',
   },
   {
-    title: '👤 Spotlight',
+    title: ' Spotlight',
     description:
       'Showcase your skills. Shape your future. Access every match you’ve played, build personal highlight reels, track your performance, and create a standout profile that gets noticed.',
     image: '/rename.webp',
   },
   {
-    title: '🧠 CoachVision Suite',
+    title: ' CoachVision Suite',
     description:
       'Smarter analysis. Better results. Get tactical insights and player-specific video clips. Analyze full matches and fine-tune strategies with visual data that supports every coaching decision.',
     image: '/jeff.webp',
   },
   {
-    title: '📹 Match Footage Access',
+    title: ' Match Footage Access',
     description:
       'Watch full matches, highlight reels, and position-specific clips to assess talent better.',
     image: '/agent.webp',
   },
   {
-    title: '🤖 Smart Agent Matching',
+    title: ' Smart Agent Matching',
     description:
       'Connect rising talents with scouts and agents based on region, skillset, and market value.',
     image: '/agan.webp',
