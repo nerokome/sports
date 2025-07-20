@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Endcontact from '../components/Endcontact';
 
-// ✅ List of slideshow images
 const images = [
-  '/wen.webp', 
+  '/wen.webp',
   '/amerball.webp',
   '/ken.webp',
 ];
@@ -15,7 +14,15 @@ const Join = () => {
   const [message, setMessage] = useState('');
   const [currentImage, setCurrentImage] = useState(0);
 
-  // ✅ Rotate images every 4 seconds
+  // Preload images to prevent flicker
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+  // Change image every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
@@ -23,7 +30,6 @@ const Join = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // ✅ Handle email submission
   const handleSubscribe = async () => {
     if (!email || !email.includes('@')) {
       setMessage('❌ Please enter a valid email.');
@@ -64,29 +70,24 @@ const Join = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
-         <div className='bg-gray-800 h-20 w-full'>
+      <div className="bg-gray-800 h-20 w-full" />
 
-        </div>
-      <main className="flex-grow flex flex-col  md:flex-row">
-       
-        {/* 🔹 Form Section - Left */}
+      <main className="flex-grow flex flex-col md:flex-row">
+        {/* Left: Text & Form */}
         <div className="md:w-1/2 w-full flex items-center justify-center px-6 py-12">
           <div className="w-full max-w-2xl text-center">
             <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4">
               <p className="text-3xl sm:text-4xl font-semibold">Scout,</p>
               <p className="text-3xl sm:text-4xl font-semibold">
-                <span className="text-blue-500">Spot</span> and Develop Talent
+                Spot and Develop Talent
               </p>
             </div>
             <p className="text-3xl sm:text-4xl font-semibold mt-2">— All in one place</p>
 
-            <div className="mt-6 text-base sm:text-lg font-medium text-gray-700">
-              <p>
-                Welcome to SCAH, the all-in-one
-                scouting hub unlocking hidden youth talent through data, video, and performance tools.
-                Join the next-gen platform built for scouts coaches rising athletes
-              </p>
-            </div>
+            <p className="mt-6 text-base sm:text-lg font-medium text-gray-700">
+              Welcome to SCAH, the all-in-one scouting hub unlocking hidden youth talent through data,
+              video, and performance tools. Join the next-gen platform built for scouts, coaches, and rising athletes.
+            </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full max-w-lg mx-auto">
               <input
@@ -111,19 +112,19 @@ const Join = () => {
           </div>
         </div>
 
-        {/* 🔹 Slideshow Section - Right */}
-        <div className="md:w-1/2 w-full flex items-center justify-center p-6 ">
-          <div className="relative w-full max-w-md h-[300px] md:h-[400px] flex items-center justify-center">
+        {/* Right: Crossfade Image Slideshow */}
+        <div className="md:w-1/2 w-full flex items-center justify-center p-6">
+          <div className="relative w-full max-w-md h-[300px] md:h-[400px] overflow-hidden rounded-3xl  shadow-xl bg-transparent">
             <AnimatePresence mode="wait">
               <motion.img
                 key={images[currentImage]}
                 src={images[currentImage]}
-                alt="Scouting Slide"
-                className="w-full h-full object-cover rounded-3xl border-4 border-white shadow-xl"
+                alt="Slideshow"
+                className="absolute inset-0 w-full h-full object-cover"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.6 }}
               />
             </AnimatePresence>
           </div>
