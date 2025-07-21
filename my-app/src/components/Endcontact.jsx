@@ -4,35 +4,32 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
 } from 'react-icons/fa';
-import { IoFootballOutline } from 'react-icons/io5';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Endcontact = () => {
   return (
-    <footer className="bg-black text-gray-200 px-8 py-12">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12 md:gap-0">
-
-        {/* Logo and animation */}
+    <footer className="bg-black text-gray-200 px-6 sm:px-8 py-12">
+      {/* Top Section */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-start gap-y-10 gap-x-12 flex-wrap">
+        
+        {/* Logo */}
         <motion.div
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 self-start"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          
           <img
-          src="/sca.png"
-         alt="SCAH Logo"
-          className="w-32 h-auto md:w-40 object-contain"
-/>
-
-       
+            src="/sca.png"
+            alt="SCAH Logo"
+            className="w-32 h-auto md:w-40 object-contain"
+          />
         </motion.div>
 
-        {/* Legal Links */}
+        {/* Legal */}
         <motion.div
-          className="flex flex-col gap-2"
+          className="flex flex-col gap-2 self-start"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -46,24 +43,42 @@ const Endcontact = () => {
           </ul>
         </motion.div>
 
-        {/* Eyeball Links */}
+        {/* Navigation */}
         <motion.div
-          className="flex flex-col gap-2"
+          className="flex flex-col gap-2 self-start"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
         >
           <h4 className="font-semibold text-lg">SCAH</h4>
-          <ul className="space-y-1 text-sm ">
+          <ul className="space-y-1 text-sm">
             <li><a href="/home" className="hover:underline">Homepage</a></li>
             <li><a href="/mission" className="hover:underline">Mission</a></li>
+            <li><a href="/community" className="hover:underline">Community</a></li>
+            <li><a href="/join" className="hover:underline">Join</a></li>
             <li><a href="/contact" className="hover:underline">Contacts</a></li>
           </ul>
         </motion.div>
 
-        {/* Social Media Icons */}
+        {/* Account */}
         <motion.div
-          className="flex gap-4 mt-4 md:mt-0"
+          className="flex flex-col gap-2 self-start"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <h4 className="font-semibold text-lg">Account</h4>
+          <ul className="space-y-1 text-sm">
+            <li><a href="/home" className="hover:underline">Login</a></li>
+            <li><a href="/mission" className="hover:underline">Signup</a></li>
+          </ul>
+        </motion.div>
+      </div>
+
+      {/* Bottom Note + Socials */}
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center mt-10 gap-6 sm:gap-8 text-start">
+         <motion.div
+          className="flex gap-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
@@ -71,13 +86,11 @@ const Endcontact = () => {
           <a href="#" className="text-gray-300 hover:text-gray-600"><FaFacebookF size={20} /></a>
           <a href="#" className="text-gray-300 hover:text-gray-600"><FaInstagram size={20} /></a>
           <a href="#" className="text-gray-300 hover:text-gray-600"><FaLinkedinIn size={20} /></a>
-          <a href="#" className="text-gray-300 hover:text-gray-600"><FaYoutube size={20} /></a>
+          <a href="#" className="text-gray-300 hover:text-gray-600"><FaXTwitter size={20} /></a>
         </motion.div>
-      </div>
-      <div className='flex items-center justify-center mt-30'>
-        <p className='text-md '>
-          SCAH @2025
-        </p>
+        <p className="text-md text-gray-300">SCAH ©2025</p>
+
+       
       </div>
     </footer>
   );

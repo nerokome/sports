@@ -41,7 +41,7 @@ const Navbar = () => {
       </motion.div>
 
       {/* Desktop Navigation */}
-      <ul className='hidden lg:flex pt-5'>
+      <ul className='hidden lg:flex pt-2'>
         {navLinks.map(({ name, to }, index) => (
           <motion.li key={index} className='p-4' whileHover={{ scale: 1.05 }}>
             <Link
