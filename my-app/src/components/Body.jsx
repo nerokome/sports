@@ -98,7 +98,7 @@ const Body = () => {
             <motion.div
               whileHover={{ scale: 1.03 }}
               transition={{ type: 'spring', stiffness: 300 }}
-              className="w-full sm:w-[400px] h-auto border border-gray-300 bg-gray-300 shadow-lg rounded-lg p-6"
+              className="w-full sm:w-[400px] h-auto border border-green-400 bg-gray-300 shadow-lg rounded-lg p-6"
               variants={cardVariant}
             >
               <motion.p className="text-2xl mb-4 font-bold text-left">
@@ -113,8 +113,8 @@ const Body = () => {
             </motion.div>
 
             {/* Divider */}
-            <div className="hidden sm:block w-px h-[250px] bg-gray-400 mx-4"></div>
-            <div className="block sm:hidden w-[80%] h-px bg-gray-400 my-6"></div>
+            <div className="hidden sm:block w-px h-[250px] bg-green-400 mx-4"></div>
+            <div className="block sm:hidden w-[80%] h-px bg-green-400 my-6"></div>
 
             {/* Image */}
             <motion.img
