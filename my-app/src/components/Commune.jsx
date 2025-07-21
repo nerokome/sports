@@ -90,10 +90,10 @@ const Commune = () => {
   };
 
   return (
-    <div className="bg-black text-white py-16 px-4 sm:px-10 min-h-screen">
+    <div className="bg-gray-200 text-black py-16 px-4 sm:px-10 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <motion.h2 className="text-4xl font-extrabold mb-6">The SCAH Community</motion.h2>
-        <motion.p className="text-lg text-gray-300 mb-14">
+        <motion.p className="text-lg text-gray-700 mb-14">
           A collaborative space of athletes, coaches, scouts, and fans—each playing a vital role in discovering and developing future stars.
         </motion.p>
 
@@ -102,7 +102,7 @@ const Commune = () => {
             <motion.div
               key={index}
               onClick={() => openForm(group.role)}
-              className="cursor-pointer bg-gray-900 rounded-2xl overflow-hidden hover:scale-[1.02] transition duration-300"
+              className="cursor-pointer bg-gray-500 rounded-2xl overflow-hidden hover:scale-[1.02] transition duration-300"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
