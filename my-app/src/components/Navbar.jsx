@@ -114,7 +114,7 @@ const Navbar = () => {
       {/* Toggle Button for Mobile */}
       <div className='block lg:hidden z-20 pt-6'>
         {!nav && (
-          <AiOutlineMenu color='white' size={30} onClick={handleNav} />
+          <AiOutlineMenu color='black' size={30} onClick={handleNav} />
         )}
       </div>
 
@@ -154,8 +154,8 @@ const Navbar = () => {
               key={idx}
               className={`p-4 transition-colors duration-300 ${
                 isActive(to)
-                  ? 'text-red-800'
-                  : 'text-gray-200 hover:text-red-400'
+                  ? 'text-gray-400'
+                  : 'text-gray-200 hover:text-gray-400'
               }`}
               whileHover={{ scale: 1.05 }}
             >
