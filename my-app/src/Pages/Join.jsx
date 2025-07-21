@@ -89,11 +89,18 @@ const Join = () => {
               video, and performance tools. Join the next-gen platform built for scouts, coaches, and rising athletes.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full max-w-lg mx-auto">
+            <div className="mt-10 flex flex-col sm:flex-col items-center gap-4 sm:gap-6 w-full max-w-lg mx-auto">
+               <select className="w-full p-2  rounded-lg py-1 px-3 shadow-md border border-gray-400 shadow-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400">
+               
+               <option>I am an Athlete </option>
+               <option>I am a Coach</option>
+                <option>I am a Scout</option>
+            
+          </select>
               <input
                 type="email"
                 placeholder="Enter your e-mail"
-                className="flex-1 w-full p-3 rounded-lg shadow-md text-gray-800 placeholder-gray-500 placeholder:italic focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 w-full p-3 rounded-lg shadow-md text-gray-800 placeholder-gray-500 placeholder:italic focus:outline-none focus:ring-2 focus:ring-green-400"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
