@@ -105,7 +105,7 @@ const Join = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-200 w-full sm:w-auto"
+                className="bg-green-400 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-500 transition-all duration-200 w-full sm:w-auto"
                 onClick={handleSubscribe}
                 disabled={loading}
               >
