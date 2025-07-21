@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { IoFootballOutline } from 'react-icons/io5';
 import { motion, AnimatePresence } from 'framer-motion';
+import { CiLogin } from "react-icons/ci";
+import { IoPerson } from "react-icons/io5";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -20,7 +22,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className='flex justify-between h-20 w-full mx-auto px-4 font-semibold text-xl text-gray-300 bg-transparent'>
+    <div className='flex justify-between h-20 w-full mx-auto px-4 font-semibold text-xl text-gray-300 bg-transparent border border-b-1 border-gray-300'>
 
       {/* Logo and Icon */}
       <motion.div
@@ -45,7 +47,7 @@ const Navbar = () => {
             <Link
               to={to}
               className={`transition-colors duration-300 ${
-                isActive(to) ? 'text-blue-600 ' : 'text-gray-300 hover:text-red-400'
+                isActive(to) ? 'text-gray-500 ' : 'text-gray-800 hover:text-gray-500'
               }`}
             >
               {name}
@@ -55,33 +57,59 @@ const Navbar = () => {
       </ul>
 
       {/* Desktop Button */}
-      <motion.div
-        className='hidden lg:flex gap-3 p-3 mt-4'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
+      {/* Desktop Button */}
+<motion.div
+  className="hidden lg:flex gap-3 p-3 mt-4 group"
+  initial={{ opacity: 0, y: -10 }}
+  animate={{ opacity: 1, y: 0 }}
+  whileHover={{ scale: 1.01 }}
+  transition={{ delay: 0.5, duration: 0.6 }}
+>
+  <a href="/join">
+    <motion.button
+      whileTap={{ scale: 0.95 }}
+      whileHover={{
+        scale: 1.08,
+        boxShadow: "0px 0px 12px rgba(34,197,94,0.5)",
+        backgroundColor: "rgba(255,255,255,0.1)",
+      }}
+      className="bg-green-400 hover:bg-transparent text-white
+       hover:text-green-500 text-sm border border-green-400 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2
+        rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2 font-sans italic"
+    >
+      <motion.span
+        whileHover={{ rotate: -5, y: -2 }}
+        transition={{ type: "spring", stiffness: 300 }}
       >
-        <a href='/join' >
-          <motion.button
-          whileTap={{ scale: 0.95 }}
-          whileHover={{ scale: 1.05 }}
-          className="bg-blue-400 hover:bg-blue-600 text-white text-md  py-2 px-3 h-10 sm:px-4 sm:py-2
-             rounded-lg transition duration-300 ease-in-out italic "
-        >
-          sign up
-        </motion.button>
-        </a>
-        <a href='/join' >
-          <motion.button
-          whileTap={{ scale: 0.95 }}
-          whileHover={{ scale: 1.05 }}
-          className="bg-blue-400 hover:bg-blue-600 text-white text-md  py-2 px-3 h-10 sm:px-4 sm:py-2
-             rounded-lg transition duration-300 ease-in-out italic "
-        >
-          sign in
-        </motion.button>
-        </a>
-      </motion.div>
+        <IoPerson size={20} className="text-white group-hover:text-green-500" />
+      </motion.span>
+      Sign up
+    </motion.button>
+  </a>
+
+  <a href="/join">
+    <motion.button
+      whileTap={{ scale: 0.95 }}
+      whileHover={{
+        scale: 1.08,
+        boxShadow: "0px 0px 12px rgba(34,197,94,0.5)",
+        backgroundColor: "rgba(255,255,255,0.1)",
+      }}
+      className="bg-green-400 hover:bg-transparent text-white
+       hover:text-green-500 text-sm border border-green-400 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2
+        rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2 font-sans italic"
+    >
+      <motion.span
+        whileHover={{ rotate: 5 }}
+        transition={{ type: "spring", stiffness: 250 }}
+      >
+        <CiLogin size={20} className="text-white group-hover:text-green-500" />
+      </motion.span>
+      Login
+    </motion.button>
+  </a>
+</motion.div>
+
 
       {/* Toggle Button for Mobile */}
       <div className='block lg:hidden z-20 pt-6'>

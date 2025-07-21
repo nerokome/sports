@@ -37,7 +37,7 @@ function NavbarWithScroll() {
         left: 0,
         width: '100%',
         zIndex: 1000,
-        backgroundColor: scrolled ? 'black' : 'transparent', // dark gray
+        backgroundColor: scrolled ? '#e5e7eb' : '#e5e7eb', // dark gray
         transition: 'background-color 0.3s',
       }}
     >
