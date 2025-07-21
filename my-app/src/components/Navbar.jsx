@@ -26,7 +26,7 @@ const Navbar = () => {
 
       {/* Logo and Icon */}
       <motion.div
-        className='flex'
+        className='flex pt-4'
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -35,13 +35,13 @@ const Navbar = () => {
        <img
           src="/sca.png"
          alt="SCAH Logo"
-          className="w-32 h-auto md:w-40 object-contain"
+          className="w-32 h-20 md:w-40 object-contain"
 />
        
       </motion.div>
 
       {/* Desktop Navigation */}
-      <ul className='hidden lg:flex pt-2'>
+      <ul className='hidden lg:flex pt-5'>
         {navLinks.map(({ name, to }, index) => (
           <motion.li key={index} className='p-4' whileHover={{ scale: 1.05 }}>
             <Link
