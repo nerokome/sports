@@ -39,7 +39,7 @@ const Register = () => {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="flex items-center justify-center h-[700px] bg-gradient-to-br from-green-50 to-white px-4"
+      className="flex items-center justify-center h-[700px] bg-gray-100 px-4"
     >
       <motion.div
         className="w-full max-w-md md:max-w-lg lg:max-w-xl bg-white p-6 sm:p-8 rounded-xl shadow-xl"
@@ -104,6 +104,16 @@ const Register = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none"
             />
           </motion.div>
+          <label htmlFor="email" className="block mb-1 text-sm font-medium">
+              please specify
+            </label>
+           <select className="w-full p-2  rounded-lg py-1 px-3 shadow-md border border-gray-300 shadow-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400">
+                <option>I am  </option>
+               <option>I am an Athlete </option>
+               <option>I am a Coach</option>
+                <option>I am a Scout</option>
+            
+          </select>
 
           <motion.div
             initial={{ opacity: 0, x: -20 }}

@@ -90,8 +90,8 @@ const Join = () => {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-col items-center gap-4 sm:gap-6 w-full max-w-lg mx-auto">
-               <select className="w-full p-2  rounded-lg py-1 px-3 shadow-md border border-gray-400 shadow-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400">
-               
+               <select className="w-full p-2  rounded-lg py-1 px-3 shadow-md border border-gray-300 shadow-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400">
+                <option>I am  </option>
                <option>I am an Athlete </option>
                <option>I am a Coach</option>
                 <option>I am a Scout</option>
