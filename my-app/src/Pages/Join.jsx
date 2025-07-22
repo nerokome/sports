@@ -70,7 +70,7 @@ const Join = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="bg-gray-800 h-20 w-full" />
+
 
       <main className="flex-grow flex flex-col md:flex-row">
         {/* Left: Text & Form */}

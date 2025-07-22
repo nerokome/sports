@@ -22,8 +22,8 @@ const Dong = () => {
                     className="w-32 h-auto md:w-40 object-contain"
                   />
                 </motion.div>
-                <div className='flex items-start md:items-center md:px-150 '>
-                   <ul className="space-y-2 md:space-y-0 md:space-x-6 flex flex-col md:flex-row p-5  text-start md:pt-3   md:text-xl md:text-center  text-lg ">
+                <div className='flex items-start md:items-center md:px-170 '>
+                   <ul className="space-y-2 md:space-y-0 md:space-x-6 flex flex-col md:flex-row p-5  text-start md:pt-3   md:text-lg md:text-center  text-lg ">
           <li>
             <a href="/home" className="hover:underline">
               Home

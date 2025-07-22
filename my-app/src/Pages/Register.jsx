@@ -35,6 +35,7 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-black">
+       <div className="bg-black h-20 w-full" />
         <motion.div
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
@@ -48,7 +49,7 @@ const Register = () => {
         transition={{ duration: 0.4, delay: 0.2 }}
       >
         <motion.h2
-          className="text-2xl sm:text-3xl font-bold mb-6 text-center text-green-600"
+          className="text-2xl sm:text-3xl font-bold mb-6 text-center font-mono text-green-600"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
