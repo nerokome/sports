@@ -47,7 +47,7 @@ const Login = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="flex items-center justify-center h-[700px] bg-gray-100 px-4 sm:px-6"
+      className="flex items-center justify-center h-[500px] sm:h-[700px] bg-gray-100 px-4 sm:px-6"
 
     >
        

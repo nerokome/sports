@@ -35,7 +35,20 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-black">
-       <div className="bg-black h-20 w-full" />
+       <div className="bg-black flex items-center justify-center h-20 w-full" >
+               <motion.div
+                                 className="flex items-center gap-2 self-start"
+                                 initial={{ x: -50, opacity: 0 }}
+                                 animate={{ x: 0, opacity: 1 }}
+                                 transition={{ duration: 0.6 }}
+                               >
+                                 <img
+                                   src="/sca.png"
+                                   alt="SCAH Logo"
+                                   className="w-32 h-auto md:w-40 object-contain"
+                                 />
+                               </motion.div>
+             </div>
         <motion.div
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
