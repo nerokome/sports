@@ -142,7 +142,7 @@ const Navbar = () => {
           <AiOutlineClose
             color='gray'
             size={25}
-            className='cursor-pointer'
+            className='cursor-pointer '
             onClick={handleNav}
           />
         </div>

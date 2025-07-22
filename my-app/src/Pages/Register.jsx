@@ -39,7 +39,7 @@ const Register = () => {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="flex items-center justify-center h-[900px] bg-gradient-to-br from-green-50 to-white px-4"
+      className="flex items-center justify-center h-[700px] bg-gradient-to-br from-green-50 to-white px-4"
     >
       <motion.div
         className="w-full max-w-md md:max-w-lg lg:max-w-xl bg-white p-6 sm:p-8 rounded-xl shadow-xl"

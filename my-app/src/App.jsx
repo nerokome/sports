@@ -32,7 +32,7 @@ function App() {
   const shouldShowNavbar = !noNavbarRoutes.includes(location.pathname);
 
   return (
-    <div className="relative">
+    <div className="relative bg-black">
       {shouldShowNavbar && <NavbarWithScroll />}
 
       <AnimatePresence mode="wait">

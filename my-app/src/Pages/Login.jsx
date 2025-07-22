@@ -33,7 +33,7 @@ const Login = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="flex items-center justify-center h-[600px] bg-gray-100 px-4 sm:px-6"
+      className="flex items-center justify-center h-[700px] bg-gray-100 px-4 sm:px-6"
     >
       <motion.div
         className="w-full max-w-md bg-white p-6 sm:p-8 rounded-xl shadow-xl"
