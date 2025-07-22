@@ -1,5 +1,4 @@
 // src/App.js
-import './App.css';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Hero from './Pages/Hero';
