@@ -1,14 +1,20 @@
-// src/App.js
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect } from 'react';
+
+// Pages
 import Hero from './Pages/Hero';
 import Mission from './Pages/Mission';
 import Join from './Pages/Join';
 import Community from './Pages/Community';
 import Contact from './Pages/Contact';
-import { useEffect } from 'react';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
 
-// ✅ Scroll-to-top hook defined here and imported directly
+// Navbar
+import NavbarWithScroll from './Pages/Navbarscroll'; // or './components/NavbarWithScroll' if that's the real path
+
+// Scroll-to-top hook
 function useScrollToTop() {
   const { pathname } = useLocation();
 
@@ -19,16 +25,22 @@ function useScrollToTop() {
 
 function App() {
   const location = useLocation();
-  useScrollToTop(); // 🔄 Call scroll-to-top on every route change
+  useScrollToTop();
+
+  // ❌ Routes where the navbar should be hidden
+  const noNavbarRoutes = ['/login', '/register'];
+  const shouldShowNavbar = !noNavbarRoutes.includes(location.pathname);
 
   return (
     <div className="relative">
+      {shouldShowNavbar && <NavbarWithScroll />}
+
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           {/* Redirect root to /home */}
           <Route path="/" element={<Navigate to="/home" replace />} />
 
-          {/* Home Page */}
+          {/* Hero Page */}
           <Route
             path="/home"
             element={
@@ -99,6 +111,36 @@ function App() {
                 transition={{ duration: 0.5 }}
               >
                 <Contact />
+              </motion.div>
+            }
+          />
+
+          {/* Login Page (No Navbar) */}
+          <Route
+            path="/login"
+            element={
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Login/>
+              </motion.div>
+            }
+          />
+
+          {/* Register Page (No Navbar) */}
+          <Route
+            path="/register"
+            element={
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Register />
               </motion.div>
             }
           />

@@ -65,7 +65,7 @@ const Navbar = () => {
   whileHover={{ scale: 1.01 }}
   transition={{ delay: 0.5, duration: 0.6 }}
 >
-  <a href="/join">
+  <a href="/register">
     <motion.button
       whileTap={{ scale: 0.95 }}
       whileHover={{
@@ -87,7 +87,7 @@ const Navbar = () => {
     </motion.button>
   </a>
 
-  <a href="/join">
+  <a href="/login">
     <motion.button
       whileTap={{ scale: 0.95 }}
       whileHover={{
@@ -170,14 +170,14 @@ const Navbar = () => {
       {/* Bottom Section: Sign In / Sign Up */}
       <div className="flex flex-col gap-3">
         <Link
-          to="/join"
+          to="/login"
           onClick={handleNav}
           className="block text-center px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition"
         >
           Sign In
         </Link>
         <Link
-          to="/join"
+          to="/register"
           onClick={handleNav}
           className="block text-center px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition"
         >
