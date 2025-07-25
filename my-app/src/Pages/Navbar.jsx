@@ -26,16 +26,16 @@ const Navbar = () => {
 
       {/* Logo and Icon */}
       <motion.div
-        className='flex pt-4'
+        className='flex items-center '
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
 
       >
        <img
-          src="/sca.png"
+          src="/kep.png"
          alt="SCAH Logo"
-          className="w-32 h-20 md:w-40 object-contain"
+          className="w-35 h-30 md:w-40 object-contain "
 />
        
       </motion.div>
@@ -132,12 +132,12 @@ const Navbar = () => {
       <div>
         {/* Close Icon and Logo */}
         <div className='flex justify-between items-center mb-4'>
-          <div className='flex gap-3'>
-            <img
-              src="/sca.png"
-              alt="SCAH Logo"
-              className="w-32 h-auto md:w-40 object-contain"
-            />
+          <div className='flex gap-4'>
+             <img
+          src="/kep.png"
+         alt="SCAH Logo"
+          className="w-32 h-30 md:w-40 object-contain"
+/>
           </div>
           <AiOutlineClose
             color='gray'

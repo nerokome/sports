@@ -9,7 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Endcontact = () => {
   return (
-    <footer className="bg-black text-gray-200 px-6 sm:px-8 py-12">
+    <footer className="bg-black text-gray-200 px-6 sm:px-8 py-5">
       {/* Top Section */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-start gap-y-10 gap-x-12 flex-wrap">
         
@@ -21,7 +21,7 @@ const Endcontact = () => {
           transition={{ duration: 0.6 }}
         >
           <img
-            src="/sca.png"
+            src="/kep.png"
             alt="SCAH Logo"
             className="w-32 h-auto md:w-40 object-contain"
           />
