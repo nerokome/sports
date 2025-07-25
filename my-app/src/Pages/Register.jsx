@@ -67,7 +67,7 @@ const Register = () => {
           transition={{ duration: 0.4, delay: 0.2 }}
         >
           <motion.h2
-            className="text-2xl sm:text-3xl font-bold mb-6 text-center font-mono text-green-600"
+            className="text-2xl sm:text-3xl font-bold mb-6 text-center  text-green-600"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}

@@ -59,7 +59,7 @@ const Login = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <motion.h2
-            className="text-2xl sm:text-3xl font-bold text-center font-mono text-green-600 mb-6"
+            className="text-2xl sm:text-3xl font-bold text-center  text-green-600 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
