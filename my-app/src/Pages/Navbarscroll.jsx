@@ -21,7 +21,7 @@ export default function NavbarWithScroll() {
         left: 0,
         width: '100%',
         zIndex: 1000,
-        backgroundColor: scrolled ? '#e5e7eb' : '#e5e7eb',
+        backgroundColor: scrolled ? '#F4F2EE' : '#F4F2EE',
         transition: 'background-color 0.3s',
       }}
     >

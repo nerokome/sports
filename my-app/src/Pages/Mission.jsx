@@ -21,7 +21,7 @@ const Mission = () => {
           muted
           playsInline
           preload="auto"
-          poster="/fallback.jpg" // ✅ optional: fallback image while loading
+          poster="/fallback.jpg" 
           className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75"
         >
           <source src="/video.mp4" type="video/mp4" />
@@ -53,14 +53,15 @@ const Mission = () => {
             data-driven insights, and meaningful opportunities that bridge the gap between raw talent and professional achievement.
           </motion.p>
 
-          <motion.button
-            onClick={scrollToPart}
-            className="mt-6 px-6 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+         <motion.button
+         onClick={scrollToPart}
+         className="mt-6 px-6 py-3 bg-teal-800 text-white rounded-full font-semibold hover:bg-teal-900 transition"
+           whileHover={{ scale: 1.05 }}
+             whileTap={{ scale: 0.95 }}
+>
             Learn More
-          </motion.button>
+            </motion.button>
+
         </div>
       </div>
 

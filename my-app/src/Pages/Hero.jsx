@@ -53,7 +53,7 @@ const Hero = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
         >
           <motion.p
-            className="text-3xl sm:text-4xl font-serif mb-2"
+            className="text-3xl sm:text-4xl  mb-2"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
@@ -62,7 +62,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.p
-            className="text-3xl sm:text-4xl font-serif mb-4"
+            className="text-3xl sm:text-4xl  mb-4"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6 }}
@@ -71,7 +71,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.p
-            className="text-base sm:text-lg mb-10 max-w-xl italic"
+            className="text-base sm:text-lg mb-10 max-w-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
@@ -80,7 +80,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="bg-green-300 p-4 rounded-3xl text-sm sm:text-lg py-3 sm:py-5 font-mono text-gray-700 font-semibold cursor-pointer hover:bg-green-400 transition"
+            className="bg-teal-800 p-4 rounded-3xl text-sm sm:text-lg py-3 sm:py-5  text-white font-semibold cursor-pointer  transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 300 }}

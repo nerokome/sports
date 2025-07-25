@@ -64,7 +64,7 @@ const Join = () => {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col justify-between bg-gray-200"
+      className="min-h-screen flex flex-col justify-between bg-[#F4F2EE]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -90,7 +90,7 @@ const Join = () => {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-col items-center gap-4 sm:gap-6 w-full max-w-lg mx-auto">
-               <select className="w-full p-2  rounded-lg py-1 px-3 shadow-md border border-gray-300 shadow-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400">
+               <select className="w-full p-2  rounded-lg py-1 px-3 shadow-md border border-gray-300 shadow-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-800">
                 <option>I am  </option>
                <option>I am an Athlete </option>
                <option>I am a Coach</option>
@@ -100,12 +100,12 @@ const Join = () => {
               <input
                 type="email"
                 placeholder="Enter your e-mail"
-                className="flex-1 w-full p-3 rounded-lg shadow-md text-gray-800 placeholder-gray-500 placeholder:italic focus:outline-none focus:ring-2 focus:ring-green-400"
+                className="flex-1 w-full p-3 rounded-lg shadow-md text-gray-800 placeholder-gray-500 placeholder:italic focus:outline-none focus:ring-2 focus:ring-teal-800"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button
-                className="bg-green-400 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-500 transition-all duration-200 w-full sm:w-auto"
+                className="bg-teal-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-teal-800 transition-all duration-200 w-full sm:w-auto"
                 onClick={handleSubscribe}
                 disabled={loading}
               >

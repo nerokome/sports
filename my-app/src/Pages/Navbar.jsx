@@ -73,15 +73,15 @@ const Navbar = () => {
         boxShadow: "0px 0px 12px rgba(34,197,94,0.5)",
         backgroundColor: "rgba(255,255,255,0.1)",
       }}
-      className="bg-green-400 hover:bg-transparent text-white
-       hover:text-green-500 text-sm border border-green-400 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2
-        rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2 font-sans italic"
+      className=" bg-teal-800 hover:bg-transparent text-white
+       hover:text-teal-800 text-sm border border-teal-800 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2
+        rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2 "
     >
       <motion.span
         whileHover={{ rotate: -5, y: -2 }}
         transition={{ type: "spring", stiffness: 300 }}
       >
-        <IoPerson size={20} className="text-white group-hover:text-green-500" />
+        <IoPerson size={20} className="text-white group-hover:text-teal-800" />
       </motion.span>
       Sign up
     </motion.button>
@@ -95,17 +95,17 @@ const Navbar = () => {
         boxShadow: "0px 0px 12px rgba(34,197,94,0.5)",
         backgroundColor: "rgba(255,255,255,0.1)",
       }}
-      className="bg-green-400 hover:bg-transparent text-white
-       hover:text-green-500 text-sm border border-green-400 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2
-        rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2 font-sans italic"
+      className=" bg-teal-800 hover:bg-transparent text-white
+       hover:text-teal-800 text-sm border border-teal-800 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2
+        rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2 "
     >
       <motion.span
-        whileHover={{ rotate: 5 }}
-        transition={{ type: "spring", stiffness: 250 }}
+        whileHover={{ rotate: -5, y: -2 }}
+        transition={{ type: "spring", stiffness: 300 }}
       >
-        <CiLogin size={20} className="text-white group-hover:text-green-500" />
+        <IoPerson size={20} className="text-white group-hover:text-teal-800" />
       </motion.span>
-      Login
+      Sign in
     </motion.button>
   </a>
 </motion.div>
