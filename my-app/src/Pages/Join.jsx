@@ -100,7 +100,7 @@ const Join = () => {
               <input
                 type="email"
                 placeholder="Enter your e-mail"
-                className="flex-1 w-full p-3 rounded-lg shadow-md text-gray-800 placeholder-gray-500 placeholder:italic focus:outline-none focus:ring-2 focus:ring-teal-800"
+                className="flex-1 w-full p-3 rounded-lg shadow-md text-gray-800 placeholder-gray-500 placeholder: focus:outline-none focus:ring-2 focus:ring-teal-800"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />

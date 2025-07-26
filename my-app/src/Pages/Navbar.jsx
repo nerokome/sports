@@ -126,7 +126,7 @@ const Navbar = () => {
       animate={{ x: 0 }}
       exit={{ x: '-100%' }}
       transition={{ type: 'spring', stiffness: 100 }}
-      className='fixed left-0 top-0 w-[300px] h-full bg-black md:hidden z-30 p-4 flex flex-col justify-between'
+      className='fixed left-0 top-0 w-full h-full bg-[#F4F2EE] md:hidden z-30 p-4 flex flex-col justify-between text-black'
     >
       {/* Top Section: Logo and Links */}
       <div>
@@ -154,8 +154,8 @@ const Navbar = () => {
               key={idx}
               className={`p-4 transition-colors duration-300 ${
                 isActive(to)
-                  ? 'text-gray-400'
-                  : 'text-gray-200 hover:text-gray-400'
+                  ? 'text-gray-800'
+                  : 'text-gray-800 hover:text-gray-900'
               }`}
               whileHover={{ scale: 1.05 }}
             >

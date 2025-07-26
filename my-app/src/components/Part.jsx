@@ -36,7 +36,7 @@ const Part = () => {
   Get to know <span className="italic">SCAH</span>
 </h1>
 
-<p className="text-sm sm:text-lg font-serif italic text-center leading-relaxed max-w-xl mx-auto px-2 mb-20">
+<p className="text-sm sm:text-lg  text-center leading-relaxed max-w-xl mx-auto px-2 mb-20">
   Driven by a passion for unlocking youth football’s hidden potential, our solutions are crafted to uplift and empower the community at every level.
 </p>
 

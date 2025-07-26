@@ -104,7 +104,7 @@ const Body = () => {
               <motion.p className="text-2xl mb-4 font-bold text-left">
                 {item.title}
               </motion.p>
-              <motion.p className="font-light text-lg mb-6 text-left">
+              <motion.p className=" text-lg mb-6 text-left">
                 {item.description}
               </motion.p>
               <motion.div className="flex items-center justify-center">
