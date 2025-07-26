@@ -88,7 +88,7 @@ const Endcontact = () => {
           <a href="https://www.instagram.com/scah.club?igsh=MW1qd2w0bzE3a3ZiMw%3D%3D&utm_source=qr" className="text-gray-300 hover:text-gray-600"><FaInstagram size={20} /></a>
           <a href="#" className="text-gray-300 hover:text-gray-600"><FaLinkedinIn size={20} /></a>
           <a href="#" className="text-gray-300 hover:text-gray-600"><FaXTwitter size={20} /></a>
-          <a href="#" className="text-gray-300 hover:text-gray-600"><IoIosMail size={20} /></a>
+          
         </motion.div>
         <p className="text-md text-gray-300">SCAH ©2025</p>
 
