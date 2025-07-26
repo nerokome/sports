@@ -35,7 +35,7 @@ const Mission = () => {
         {/* 📢 Foreground Content */}
         <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
           <motion.h1
-            className="text-white font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+            className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
