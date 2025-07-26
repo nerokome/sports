@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { IoFootballOutline } from 'react-icons/io5';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CiLogin } from "react-icons/ci";
 import { IoPerson } from "react-icons/io5";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const location = useLocation(); // 👈 Get current path
+  const location = useLocation();
   const handleNav = () => setNav(!nav);
 
   const navLinks = [
@@ -22,172 +19,120 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className='flex justify-between h-20 w-full mx-auto px-4 font-semibold text-xl text-gray-300 bg-transparent border border-b-1 border-gray-300'>
+    <div className='flex justify-between h-20 w-full mx-auto px-4 font-semibold text-xl text-gray-800 bg-transparent border-b border-gray-300'>
 
-      {/* Logo and Icon */}
-      <motion.div
-        className='flex items-center '
-        initial={{ x: -50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-
-      >
-       <img
+      {/* Logo */}
+      <div className='flex items-center'>
+        <img
           src="/kep.png"
-         alt="SCAH Logo"
-          className="w-35 h-30 md:w-40 object-contain "
-/>
-       
-      </motion.div>
+          alt="SCAH Logo"
+          className="w-35 h-30 md:w-40 object-contain"
+        />
+      </div>
 
       {/* Desktop Navigation */}
       <ul className='hidden lg:flex pt-5'>
         {navLinks.map(({ name, to }, index) => (
-          <motion.li key={index} className='p-4' whileHover={{ scale: 1.05 }}>
+          <li key={index} className='p-4 hover:scale-105 transition-transform'>
             <Link
               to={to}
               className={`transition-colors duration-300 ${
-                isActive(to) ? 'text-gray-500 ' : 'text-gray-800 hover:text-gray-500'
+                isActive(to) ? 'text-gray-500' : 'text-gray-800 hover:text-gray-500'
               }`}
             >
               {name}
             </Link>
-          </motion.li>
+          </li>
         ))}
       </ul>
 
-      {/* Desktop Button */}
-      {/* Desktop Button */}
-<motion.div
-  className="hidden lg:flex gap-3 p-3 mt-4 group"
-  initial={{ opacity: 0, y: -10 }}
-  animate={{ opacity: 1, y: 0 }}
-  whileHover={{ scale: 1.01 }}
-  transition={{ delay: 0.5, duration: 0.6 }}
->
-  <a href="/register">
-    <motion.button
-      whileTap={{ scale: 0.95 }}
-      whileHover={{
-        scale: 1.08,
-        boxShadow: "0px 0px 12px rgba(34,197,94,0.5)",
-        backgroundColor: "rgba(255,255,255,0.1)",
-      }}
-      className=" bg-teal-800 hover:bg-transparent text-white
-       hover:text-teal-800 text-sm border border-teal-800 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2
-        rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2 "
-    >
-      <motion.span
-        whileHover={{ rotate: -5, y: -2 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
-        <IoPerson size={20} className="text-white group-hover:text-teal-800" />
-      </motion.span>
-      Sign up
-    </motion.button>
-  </a>
+      {/* Desktop Buttons */}
+      <div className="hidden lg:flex gap-3 p-3 mt-4 group">
+        <a href="/register">
+          <button
+            className="bg-teal-800 hover:bg-transparent text-white hover:text-teal-800 text-sm border border-teal-800 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2 rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2"
+          >
+            <IoPerson size={20} className="text-white group-hover:text-teal-800" />
+            Sign up
+          </button>
+        </a>
 
-  <a href="/login">
-    <motion.button
-      whileTap={{ scale: 0.95 }}
-      whileHover={{
-        scale: 1.08,
-        boxShadow: "0px 0px 12px rgba(34,197,94,0.5)",
-        backgroundColor: "rgba(255,255,255,0.1)",
-      }}
-      className=" bg-teal-800 hover:bg-transparent text-white
-       hover:text-teal-800 text-sm border border-teal-800 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2
-        rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2 "
-    >
-      <motion.span
-        whileHover={{ rotate: -5, y: -2 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
-        <IoPerson size={20} className="text-white group-hover:text-teal-800" />
-      </motion.span>
-      Sign in
-    </motion.button>
-  </a>
-</motion.div>
+        <a href="/login">
+          <button
+            className="bg-teal-800 hover:bg-transparent text-white hover:text-teal-800 text-sm border border-teal-800 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2 rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2"
+          >
+            <IoPerson size={20} className="text-white group-hover:text-teal-800" />
+            Sign in
+          </button>
+        </a>
+      </div>
 
-
-      {/* Toggle Button for Mobile */}
+      {/* Mobile Menu Toggle */}
       <div className='block lg:hidden z-20 pt-6'>
         {!nav && (
           <AiOutlineMenu color='black' size={30} onClick={handleNav} />
         )}
       </div>
 
-     {/* Mobile Menu */}
-<AnimatePresence>
-  {nav && (
-    <motion.div
-      initial={{ x: '-100%' }}
-      animate={{ x: 0 }}
-      exit={{ x: '-100%' }}
-      transition={{ type: 'spring', stiffness: 100 }}
-      className='fixed left-0 top-0 w-full h-full bg-[#F4F2EE] md:hidden z-30 p-4 flex flex-col justify-between text-black'
-    >
-      {/* Top Section: Logo and Links */}
-      <div>
-        {/* Close Icon and Logo */}
-        <div className='flex justify-between items-center mb-4'>
-          <div className='flex gap-4'>
-             <img
-          src="/kep.png"
-         alt="SCAH Logo"
-          className="w-32 h-30 md:w-40 object-contain"
-/>
+      {/* Mobile Menu with smooth transition */}
+      <div
+        className={`fixed left-0 top-0 w-full h-full bg-[#F4F2EE] md:hidden z-30 p-4 flex flex-col justify-between text-black transform transition-transform duration-500 ease-in-out ${
+          nav ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {/* Top Section */}
+        <div>
+          <div className='flex justify-between items-center mb-4'>
+            <img
+              src="/kep.png"
+              alt="SCAH Logo"
+              className="w-32 h-30 md:w-40 object-contain"
+            />
+            <AiOutlineClose
+              color='gray'
+              size={25}
+              className='cursor-pointer'
+              onClick={handleNav}
+            />
           </div>
-          <AiOutlineClose
-            color='gray'
-            size={25}
-            className='cursor-pointer '
-            onClick={handleNav}
-          />
+
+          {/* Navigation Links */}
+          <ul className='cursor-pointer mb-6'>
+            {navLinks.map(({ name, to }, idx) => (
+              <li
+                key={idx}
+                className={`p-4 transition-colors duration-300 ${
+                  isActive(to)
+                    ? 'text-gray-800'
+                    : 'text-gray-800 hover:text-gray-900'
+                }`}
+              >
+                <Link to={to} onClick={handleNav}>
+                  {name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Navigation Links */}
-        <ul className='cursor-pointer mb-6'>
-          {navLinks.map(({ name, to }, idx) => (
-            <motion.li
-              key={idx}
-              className={`p-4 transition-colors duration-300 ${
-                isActive(to)
-                  ? 'text-gray-800'
-                  : 'text-gray-800 hover:text-gray-900'
-              }`}
-              whileHover={{ scale: 1.05 }}
-            >
-              <Link to={to} onClick={handleNav}>
-                {name}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
+        {/* Bottom Section */}
+        <div className="flex flex-col gap-3">
+          <Link
+            to="/login"
+            onClick={handleNav}
+            className="block text-center px-4 py-2 border border-gray-900 text-gray-900 rounded hover:bg-white hover:text-black transition"
+          >
+            Sign In
+          </Link>
+          <Link
+            to="/register"
+            onClick={handleNav}
+            className="block text-center px-4 py-2 border border-gray-900 text-gray-900 rounded hover:bg-white hover:text-black transition"
+          >
+            Sign Up
+          </Link>
+        </div>
       </div>
-
-      {/* Bottom Section: Sign In / Sign Up */}
-      <div className="flex flex-col gap-3">
-        <Link
-          to="/login"
-          onClick={handleNav}
-          className="block text-center px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition"
-        >
-          Sign In
-        </Link>
-        <Link
-          to="/register"
-          onClick={handleNav}
-          className="block text-center px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition"
-        >
-          Sign Up
-        </Link>
-      </div>
-    </motion.div>
-  )}
-</AnimatePresence>
-
     </div>
   );
 };

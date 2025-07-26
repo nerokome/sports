@@ -90,7 +90,7 @@ const Commune = () => {
   };
 
   return (
-    <div className="bg-[#F4F2EE] text-black py-16 px-4 sm:px-10 min-h-screen">
+    <div className="bg-[#F4F2EE] py-16 px-4 sm:px-10 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <motion.h2 className="text-3xl sm:text-4xl font-extrabold mb-6">The SCAH Community</motion.h2>
         <motion.p className="text-lg text-gray-700 mb-14">
@@ -102,7 +102,7 @@ const Commune = () => {
             <motion.div
               key={index}
               onClick={() => openForm(group.role)}
-              className="cursor-pointer bg-teal-800 rounded-2xl overflow-hidden hover:scale-[1.02] transition duration-300"
+              className="cursor-pointer bg-teal-900 rounded-2xl overflow-hidden hover:scale-[1.02] transition duration-300"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -112,8 +112,8 @@ const Commune = () => {
               </div>
               <div className="p-6 text-left">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="text-2xl flex items-center gap-2 font-semibold">
-                    <span>{group.emoji}</span>
+                  <div className="text-2xl flex text-white items-center gap-2 font-semibold">
+                    
                     <span>{group.role}</span>
                   </div>
                   <a href="/join" className="text-[#F4F2EE] hover:text-[#F4F2EE] transition">

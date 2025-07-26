@@ -29,7 +29,7 @@ const Start = () => {
           <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="rounded-3xl py-2 px-6 font-mono font-semibold text-xl text-gray-700 bg-gray-200 hover:bg-gray-400"
+          className="rounded-3xl py-2 px-6  font-semibold text-xl text-gray-700 bg-gray-200 hover:bg-gray-400"
         >
           Start your journey 
         </motion.button>

@@ -26,7 +26,7 @@ const NewsletterForm = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-gray-200 text-gray-800 p-8 md:p-16 flex flex-col md:flex-row items-center justify-between rounded-lg w-full mx-auto"
+      className="bg-[#F4F2EE] text-gray-800 p-8 md:p-16 flex flex-col md:flex-row items-center justify-between rounded-lg w-full mx-auto"
     >
       {/* Left Side: Text and Form */}
       <motion.div
