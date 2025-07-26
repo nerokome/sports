@@ -76,10 +76,11 @@ const Navbar = () => {
 
       {/* Mobile Menu with smooth transition */}
       <div
-        className={`fixed left-0 top-0 w-full h-full bg-[#F4F2EE] md:hidden z-30 p-4 flex flex-col justify-between text-black transform transition-transform duration-500 ease-in-out ${
-          nav ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
+  className={`fixed right-0 top-0 w-full h-full bg-[#F4F2EE] md:hidden z-30 p-4 flex flex-col justify-between text-black transform transition-transform duration-500 ease-in-out ${
+    nav ? 'translate-x-0' : 'translate-x-full'
+  }`}
+>
+
         {/* Top Section */}
         <div>
           <div className='flex justify-between items-center mb-4'>

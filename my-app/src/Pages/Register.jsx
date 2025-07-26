@@ -46,10 +46,10 @@ const Register = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <img
-            src="/sca.png"
+           <img
+            src="/kep.png"
             alt="SCAH Logo"
-            className="w-32 h-auto md:w-40 object-contain"
+            className="w-32 h-25 md:w-40 object-contain"
           />
         </motion.div>
       </div>
@@ -58,7 +58,7 @@ const Register = () => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="flex items-center justify-center h-[700px] bg-gray-100 px-4"
+        className="flex items-center justify-center h-[700px] bg-[#F4F2EE] px-4"
       >
         <motion.div
           className="w-full max-w-md md:max-w-lg lg:max-w-xl bg-white p-6 sm:p-8 rounded-xl shadow-xl"
@@ -67,7 +67,7 @@ const Register = () => {
           transition={{ duration: 0.4, delay: 0.2 }}
         >
           <motion.h2
-            className="text-2xl sm:text-3xl font-bold mb-6 text-center  text-green-600"
+            className="text-2xl sm:text-3xl font-bold mb-6 text-center  text-teal-800"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -101,7 +101,7 @@ const Register = () => {
                 placeholder="Enter your name"
                 value={name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-800 focus:outline-none"
               />
             </motion.div>
 
@@ -120,7 +120,7 @@ const Register = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-800 focus:outline-none"
               />
             </motion.div>
 
@@ -129,7 +129,7 @@ const Register = () => {
             </label>
             <select
               id="role"
-              className="w-full p-2 rounded-lg py-1 px-3 shadow-md border border-gray-300 shadow-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full p-2 rounded-lg py-1 px-3 shadow-md border border-gray-300 shadow-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-800"
             >
               <option>I am</option>
               <option>I am an Athlete</option>
@@ -153,7 +153,7 @@ const Register = () => {
                   placeholder="Enter your password"
                   value={password}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none pr-10"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-800 focus:outline-none pr-10"
                 />
                 <div
                   className="absolute inset-y-0 right-3 flex items-center cursor-pointer text-gray-500"
@@ -180,7 +180,7 @@ const Register = () => {
                   placeholder="Confirm your password"
                   value={password2}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none pr-10"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-800 focus:outline-none pr-10"
                 />
                 <div
                   className="absolute inset-y-0 right-3 flex items-center cursor-pointer text-gray-500"
@@ -195,7 +195,7 @@ const Register = () => {
               type="submit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full py-3 mt-4 bg-green-600 text-white rounded-md hover:bg-green-700 transition duration-200"
+              className="w-full py-3 mt-4 bg-teal-800 text-white rounded-md hover:bg-teal-900 transition duration-200"
             >
               Create an account
             </motion.button>
@@ -203,7 +203,7 @@ const Register = () => {
 
           <p className="mt-4 text-center text-sm text-gray-500">
             Already have an account?{" "}
-            <a href="/login" className="text-green-600 hover:underline">
+            <a href="/login" className="text-teal-800 hover:underline">
               Login
             </a>
           </p>

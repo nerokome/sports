@@ -17,7 +17,7 @@ const Dong = () => {
                   transition={{ duration: 0.6 }}
                 >
                   <img
-                    src="/sca.png"
+                    src="/kep.png"
                     alt="SCAH Logo"
                     className="w-32 h-auto md:w-40 object-contain"
                   />

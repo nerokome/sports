@@ -33,15 +33,15 @@ const Login = () => {
     <div className='min-h-screen bg-black'>
       <div className="bg-black flex items-center justify-center h-20 w-full">
         <motion.div
-          className="flex items-center gap-2 self-start"
+          className="flex items-center gap-2 self-start "
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
           <img
-            src="/sca.png"
+            src="/kep.png"
             alt="SCAH Logo"
-            className="w-32 h-auto md:w-40 object-contain"
+            className="w-32 h-25 md:w-40 object-contain"
           />
         </motion.div>
       </div>
@@ -50,7 +50,7 @@ const Login = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="flex items-center justify-center h-[500px] sm:h-[700px] bg-gray-100 px-4 sm:px-6"
+        className="flex items-center justify-center h-[500px] sm:h-[700px] bg-[#F4F2EE] px-4 sm:px-6"
       >
         <motion.div
           className="w-full max-w-md bg-white p-6 sm:p-8 rounded-xl shadow-xl"
@@ -59,7 +59,7 @@ const Login = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <motion.h2
-            className="text-2xl sm:text-3xl font-bold text-center  text-green-600 mb-6"
+            className="text-2xl sm:text-3xl font-bold text-center  text-teal-800 mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -93,7 +93,7 @@ const Login = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none text-sm"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-800 focus:outline-none text-sm"
               />
             </motion.div>
 
@@ -113,7 +113,7 @@ const Login = () => {
                   placeholder="Enter your password"
                   value={password}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:outline-none text-sm"
+                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-800 focus:outline-none text-sm"
                 />
                 <div
                   className="absolute inset-y-0 right-3 flex items-center cursor-pointer text-gray-500"
@@ -128,7 +128,7 @@ const Login = () => {
               type="submit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full py-2 mt-4 bg-green-600 text-white rounded-md hover:bg-green-700 transition duration-200 text-sm font-medium"
+              className="w-full py-2 mt-4 bg-teal-900 text-white rounded-md hover:bg-teal-900 transition duration-200 text-sm font-medium"
             >
               Sign In
             </motion.button>
@@ -136,7 +136,7 @@ const Login = () => {
 
           <div className="text-center mt-4 text-sm text-gray-600">
             Don't have an account?{" "}
-            <a href="/register" className="text-green-600 font-medium hover:underline">
+            <a href="/register" className="text-teal-800 font-medium hover:underline">
               Register
             </a>
           </div>
