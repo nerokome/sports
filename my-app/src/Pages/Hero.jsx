@@ -78,15 +78,18 @@ const Hero = () => {
           >
             Bridging the gap between grassroots talents and the professional game.
           </motion.p>
-
-          <motion.div
+          <a href='/mission'>
+            <motion.div
             className="bg-teal-800 p-4 rounded-3xl text-sm sm:text-lg py-3 sm:py-5  text-white font-semibold cursor-pointer  transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 300 }}
+            
           >
             Discover more
           </motion.div>
+          </a>
+        
         </motion.div>
       </div>
 

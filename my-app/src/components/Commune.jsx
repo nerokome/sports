@@ -1,46 +1,40 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FiExternalLink } from 'react-icons/fi';
 
 const communityData = [
   {
     role: 'Athletes',
-  
     image: '/ath.webp',
     description:
       'Aspiring players showcasing skills, uploading match videos, and seeking discovery opportunities.',
   },
   {
     role: 'Coaches & Trainers',
-    
     image: '/aoc.webp',
     description:
       'Dedicated mentors focused on developing raw talent and guiding players toward their goals.',
   },
   {
     role: 'Scouts & Agents',
-    
     image: '/scout.webp',
     description:
       'Professional eyes searching for hidden gems and high-potential players across the globe.',
   },
   {
     role: 'Clubs & Academies',
-    
     image: '/club.webp',
     description:
       'Organizations looking to partner, recruit, and nurture future stars through a robust platform.',
   },
   {
     role: 'Fans & Supporters',
-    
     image: '/fan.webp',
     description:
       'Families, followers, and communities cheering on talent and amplifying their journey.',
   },
   {
     role: 'Analysts & Technologists',
-    
     image: '/tech.webp',
     description:
       'Builders of smart tools and data systems driving modern scouting, analysis, and growth.',
@@ -92,37 +86,45 @@ const Commune = () => {
   return (
     <div className="bg-[#F4F2EE] py-16 px-4 sm:px-10 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-        <motion.h2 className="text-3xl sm:text-4xl font-extrabold mb-6">The SCAH Community</motion.h2>
+        <motion.h2 className="text-3xl sm:text-4xl font-extrabold mb-6">
+          The SCAH Community
+        </motion.h2>
         <motion.p className="text-lg text-gray-700 mb-14">
           A collaborative space of athletes, coaches, scouts, and fans—each playing a vital role in discovering and developing future stars.
         </motion.p>
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 mb-30">
           {communityData.map((group, index) => (
-            <motion.div
+            <a
               key={index}
-              onClick={() => openForm(group.role)}
-              className="cursor-pointer bg-teal-900 rounded-2xl overflow-hidden hover:scale-[1.02] transition duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
+              href="/join"
+              className="block group transition-transform transform hover:scale-[1.02]"
             >
-              <div className="h-44 overflow-hidden">
-                <img src={group.image} alt={group.role} className="w-full h-full object-cover group-hover:scale-105 transition" />
-              </div>
-              <div className="p-6 text-left">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="text-2xl flex text-white items-center gap-2 font-semibold">
-                    
-                    <span>{group.role}</span>
-                  </div>
-                  <a href="/join" className="text-[#F4F2EE] hover:text-[#F4F2EE] transition">
-                  <FiExternalLink className="text-[#F4F2EE]" />
-                  </a>
+              <motion.div
+                className="cursor-pointer bg-teal-900 rounded-2xl overflow-hidden transition duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <div className="h-44 overflow-hidden">
+                  <img
+                    src={group.image}
+                    alt={group.role}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-                <p className="text-sm text-gray-300">{group.description}</p>
-              </div>
-            </motion.div>
+                <div className="p-6 text-left">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="text-2xl flex text-white items-center gap-2 font-semibold">
+                      <span>{group.role}</span>
+                    </div>
+                    <FiExternalLink className="text-[#F4F2EE]" />
+                  </div>
+                  <p className="text-sm text-gray-300">{group.description}</p>
+                </div>
+              </motion.div>
+            </a>
           ))}
         </div>
       </div>
@@ -130,4 +132,4 @@ const Commune = () => {
   );
 };
 
-export default Commune;
+export default Commune;
