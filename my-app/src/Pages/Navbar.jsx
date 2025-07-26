@@ -26,6 +26,7 @@ const Navbar = () => {
         <img
           src="/kep.png"
           alt="SCAH Logo"
+          loading="lazy"
           className="w-35 h-30 md:w-40 object-contain"
         />
       </div>
@@ -48,23 +49,19 @@ const Navbar = () => {
 
       {/* Desktop Buttons */}
       <div className="hidden lg:flex gap-3 p-3 mt-4 group">
-        <a href="/register">
-          <button
-            className="bg-teal-800 hover:bg-transparent text-white hover:text-teal-800 text-sm border border-teal-800 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2 rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2"
-          >
+        <Link to="/register">
+          <button className="bg-teal-800 hover:bg-transparent text-white hover:text-teal-800 text-sm border border-teal-800 shadow-2xl py-2 px-4 h-10 rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2">
             <IoPerson size={20} className="text-white group-hover:text-teal-800" />
             Sign up
           </button>
-        </a>
+        </Link>
 
-        <a href="/login">
-          <button
-            className="bg-teal-800 hover:bg-transparent text-white hover:text-teal-800 text-sm border border-teal-800 shadow-2xl py-2 px-4 h-10 sm:px-4 sm:py-2 rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2"
-          >
+        <Link to="/login">
+          <button className="bg-teal-800 hover:bg-transparent text-white hover:text-teal-800 text-sm border border-teal-800 shadow-2xl py-2 px-4 h-10 rounded-xl transition-all duration-300 ease-in-out flex items-center gap-2">
             <IoPerson size={20} className="text-white group-hover:text-teal-800" />
             Sign in
           </button>
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Menu Toggle */}
@@ -76,17 +73,17 @@ const Navbar = () => {
 
       {/* Mobile Menu with smooth transition */}
       <div
-  className={`fixed right-0 top-0 w-full h-full bg-[#F4F2EE] md:hidden z-30 p-4 flex flex-col justify-between text-black transform transition-transform duration-500 ease-in-out ${
-    nav ? 'translate-x-0' : 'translate-x-full'
-  }`}
->
-
+        className={`fixed right-0 top-0 w-full h-full bg-[#F4F2EE] md:hidden z-30 p-4 flex flex-col justify-between text-black transform transition-transform duration-500 ease-in-out ${
+          nav ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
         {/* Top Section */}
         <div>
           <div className='flex justify-between items-center mb-4'>
             <img
               src="/kep.png"
               alt="SCAH Logo"
+              loading="lazy"
               className="w-32 h-30 md:w-40 object-contain"
             />
             <AiOutlineClose

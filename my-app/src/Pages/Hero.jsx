@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Body from '../components/Body';
-import Start from '../components/Start';
-import NewsletterForm from '../components/Newsletterform';
-import Endcontact from '../components/Endcontact';
 
-const images = [
-  '/coa.webp',
-  '/roa.webp',
-  '/toa.webp',
-];
+// Lazy load heavy components
+const Body = lazy(() => import('../components/Body'));
+const Start = lazy(() => import('../components/Start'));
+const NewsletterForm = lazy(() => import('../components/Newsletterform'));
+const Endcontact = lazy(() => import('../components/Endcontact'));
+
+const images = ['/coa.webp', '/roa.webp', '/toa.webp'];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
@@ -25,25 +23,21 @@ const Hero = () => {
     <div className="relative overflow-hidden">
       {/* HERO SECTION */}
       <div className="relative h-[900px] sm:h-[600px] md:h-[700px] lg:h-[800px]">
-        <AnimatePresence>
-          {images.map((img, index) =>
-            index === current && (
-              <motion.img
-                key={index}
-                src={img}
-                alt={`Slide ${index}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 0.5 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                className="absolute inset-0 w-full h-full object-cover object-center rounded-2xl"
-              />
-            )
-          )}
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={current}
+            src={images[current]}
+            alt={`Slide ${current}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0 w-full h-full object-cover object-center rounded-2xl"
+          />
         </AnimatePresence>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-70 z-[-1]" />
+        <div className="absolute inset-0 bg-black bg-opacity-70 z-10" />
 
         {/* Hero Content */}
         <motion.div
@@ -53,7 +47,7 @@ const Hero = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
         >
           <motion.p
-            className="text-3xl sm:text-4xl  mb-2"
+            className="text-3xl sm:text-4xl mb-2"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
@@ -62,7 +56,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.p
-            className="text-3xl sm:text-4xl  mb-4"
+            className="text-3xl sm:text-4xl mb-4"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6 }}
@@ -78,32 +72,33 @@ const Hero = () => {
           >
             Bridging the gap between grassroots talents and the professional game.
           </motion.p>
-          <a href='/mission'>
+
+          <a href="/mission">
             <motion.div
-            className="bg-teal-800 p-4 rounded-3xl text-sm sm:text-lg py-3 sm:py-5  text-white font-semibold cursor-pointer  transition"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: 'spring', stiffness: 300 }}
-            
-          >
-            Discover more
-          </motion.div>
+              className="bg-teal-800 px-6 py-3 sm:px-8 sm:py-4 rounded-3xl text-sm sm:text-lg text-white font-semibold cursor-pointer transition"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              Discover more
+            </motion.div>
           </a>
-        
         </motion.div>
       </div>
 
       {/* FOLLOW-UP CONTENT */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-      >
-        <Body />
-        <Start />
-        <NewsletterForm />
-        <Endcontact />
-      </motion.div>
+      <Suspense fallback={<div className="text-white p-6 text-center">Loading content...</div>}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+        >
+          <Body />
+          <Start />
+          <NewsletterForm />
+          <Endcontact />
+        </motion.div>
+      </Suspense>
     </div>
   );
 };

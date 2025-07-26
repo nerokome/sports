@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
-import Endcontact from '../components/Endcontact';
-import Commune from '../components/Commune';
+
+// Lazy-loaded components
+const Endcontact = lazy(() => import('../components/Endcontact'));
+const Commune = lazy(() => import('../components/Commune'));
 
 const Community = () => {
   const partRef = useRef(null);
@@ -31,12 +33,12 @@ const Community = () => {
         {/* 📢 Foreground Text */}
         <div className="relative z-20 flex flex-col items-start justify-center h-full px-4 sm:px-8 md:px-16 lg:px-20 text-left">
           <motion.h1
-            className="text-white  text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold"
+            className="text-white text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-           Connect Compete Grow together
+            Connect Compete Grow together
           </motion.h1>
 
           <motion.p
@@ -46,14 +48,14 @@ const Community = () => {
             transition={{ delay: 0.4 }}
           >
             Join a global network of athletes, scouts, and coaches.
-             Share your journey, connect with others, and grow through real conversation.
-                            <span className='font-semibold'> Your next breakthrough could start here. </span>
+            Share your journey, connect with others, and grow through real conversation.
+            <span className="font-semibold"> Your next breakthrough could start here. </span>
           </motion.p>
 
           <a href="/join">
             <motion.button
               onClick={scrollToPart}
-              className="mt-6 px-6 py-3 bg-teal-800 border border-teal-800 shadow-lg text-xl text-white rounded-lg font-semibold hover:bg-transparent   transition"
+              className="mt-6 px-6 py-3 bg-teal-800 border border-teal-800 shadow-lg text-xl text-white rounded-lg font-semibold hover:bg-transparent transition"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -63,10 +65,12 @@ const Community = () => {
         </div>
       </div>
 
-      {/* ⬇️ Part Section */}
+      {/* ⬇️ Lazy-loaded Part Section */}
       <div ref={partRef} className="relative z-30">
-        <Commune/>
-        <Endcontact />
+        <Suspense fallback={<div className="text-white p-6 text-center">Loading content...</div>}>
+          <Commune />
+          <Endcontact />
+        </Suspense>
       </div>
     </div>
   );

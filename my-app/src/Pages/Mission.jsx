@@ -1,8 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
-import Part from '../components/Part';
-import NewsletterForm from '../components/Newsletterform';
-import Endcontact from '../components/Endcontact';
+
+// Lazy-loaded components
+const Part = lazy(() => import('../components/Part'));
+const Endcontact = lazy(() => import('../components/Endcontact'));
+// Optional: newsletter form (if used)
+// const NewsletterForm = lazy(() => import('../components/Newsletterform'));
 
 const Mission = () => {
   const partRef = useRef(null);
@@ -21,7 +24,7 @@ const Mission = () => {
           muted
           playsInline
           preload="auto"
-          poster="/fallback.jpg" 
+          poster="/fallback.jpg"
           className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75"
         >
           <source src="/video.mp4" type="video/mp4" />
@@ -29,10 +32,9 @@ const Mission = () => {
           Your browser does not support the video tag.
         </video>
 
-        {/* 🖼️ Black overlay (optional - darkens video for readability) */}
         <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10" />
 
-        {/* 📢 Foreground Content */}
+        {/* Foreground Content */}
         <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
           <motion.h1
             className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
@@ -53,23 +55,23 @@ const Mission = () => {
             data-driven insights, and meaningful opportunities that bridge the gap between raw talent and professional achievement.
           </motion.p>
 
-         <motion.button
-         onClick={scrollToPart}
-         className="mt-6 px-6 py-3 bg-teal-800 text-white rounded-full font-semibold hover:bg-teal-900 transition"
-           whileHover={{ scale: 1.05 }}
-             whileTap={{ scale: 0.95 }}
->
+          <motion.button
+            onClick={scrollToPart}
+            className="mt-6 px-6 py-3 bg-teal-800 text-white rounded-full font-semibold hover:bg-teal-900 transition"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             Learn More
-            </motion.button>
-
+          </motion.button>
         </div>
       </div>
 
       {/* ⬇️ Content after video */}
       <div ref={partRef} className="relative z-30">
-        <Part />
-        
-        <Endcontact />
+        <Suspense fallback={<div className="text-white p-8">Loading content...</div>}>
+          <Part />
+          <Endcontact />
+        </Suspense>
       </div>
     </div>
   );
