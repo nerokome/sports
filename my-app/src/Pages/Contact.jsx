@@ -42,15 +42,15 @@ const Contact = () => {
           >
             Connect with us for partnerships, sales, support, and safeguarding inquiries.
           </motion.p>
-
-          <motion.button
-            onClick={scrollToPart}
-            className="mt-6 px-6 py-3 bg-teal-900 border border-teal-900 shadow-lg  text-xl text-white rounded-lg font-semibold hover:bg-transparent transition"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+         <motion.a
+          href="mailto:support@scah.club"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+              className="mt-6 px-6 py-3 bg-teal-900 border border-teal-900 shadow-lg text-xl text-white rounded-lg font-semibold hover:bg-transparent transition inline-block text-center"
+>
             View Contact Info
-          </motion.button>
+            </motion.a>
+
         </div>
       </div>
 
