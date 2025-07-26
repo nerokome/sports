@@ -30,10 +30,10 @@ const Part = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-300 px-4 py-8 flex items-center justify-center">
+    <div className="min-h-screen bg-[#F4F2EE] px-4 py-8 flex items-center justify-center">
       <div className="container mx-auto relative z-10">
        <h1 className="text-xl sm:text-4xl font-bold mb-4 text-center leading-tight break-words">
-  Get to know <span className="italic">SCAH</span>
+  Get to know <span className="">SCAH</span>
 </h1>
 
 <p className="text-sm sm:text-lg  text-center leading-relaxed max-w-xl mx-auto px-2 mb-20">
@@ -43,7 +43,7 @@ const Part = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-20">
           {resources.map((item, index) => {
-            const bgColor = "#9CA3AF";
+            const bgColor = "#115E59";
 
             return (
               <motion.div
@@ -63,8 +63,8 @@ const Part = () => {
                     alt={item.title}
                     className="w-full h-48 sm:h-60 md:h-64 object-cover rounded-md mb-4"
                   />
-                  <h3 className="text-lg sm:text-xl font-bold font-mono mb-2">{item.title}</h3>
-                  <p className="text-sm sm:text-base text-gray-700">{item.description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-white   mb-2">{item.title}</h3>
+                  <p className="text-sm sm:text-base text-gray-200">{item.description}</p>
                 </a>
               </motion.div>
             );

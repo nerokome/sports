@@ -68,7 +68,7 @@ const Mission = () => {
       {/* ⬇️ Content after video */}
       <div ref={partRef} className="relative z-30">
         <Part />
-        <NewsletterForm />
+        
         <Endcontact />
       </div>
     </div>
